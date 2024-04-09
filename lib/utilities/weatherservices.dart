@@ -34,11 +34,11 @@ class WeatherProvider extends ChangeNotifier {
     print(cityname);
     if(cityname=="")
     {
-      url="https://api.openweathermap.org/data/2.5/weather?lat=${_currentPosition.latitude}&lon=${_currentPosition.longitude}&appid=cd6516b46fed84bc7975eeef43d2604d";
+      url="https://api.openweathermap.org/data/2.5/weather?lat=${_currentPosition.latitude}&lon=${_currentPosition.longitude}&appid={your-api-key}";
     }
     else{
       print("inside");
-      url ="https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=cd6516b46fed84bc7975eeef43d2604d";
+      url ="https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid={your-api-key}";
     }
     final response = await http.get(Uri.parse(
         url));
